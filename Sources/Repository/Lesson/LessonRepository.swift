@@ -1,10 +1,10 @@
 import Foundation
 
-public protocol LessonsRepository {
+public protocol LessonRepository {
     
     func getAllLessons() async -> [Lesson]
     
-    func getLessonById(id: UUID) async -> Lesson?
+    func getLessonById(_ id: UUID) async -> Lesson?
     
     func getLessonsByTimeSpan(startTime: Date, endTime: Date) async -> [Lesson]
     

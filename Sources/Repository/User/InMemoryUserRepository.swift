@@ -1,6 +1,6 @@
 import Foundation
 
-public actor InMemoryUsersRepository: UsersRepository {
+public actor InMemoryUserRepository: UserRepository {
     
     private var users: [User] = []
     
@@ -8,15 +8,15 @@ public actor InMemoryUsersRepository: UsersRepository {
         users
     }
     
-    public func getUserById(id: UUID) async -> User? {
+    public func getUserById(_ id: UUID) async -> User? {
         users.first(where: { $0.id == id })
     }
     
-    public func getUserByEmail(email: String) async -> User? {
+    public func getUserByEmail(_ email: String) async -> User? {
         users.first(where: { $0.email == email })
     }
     
-    public func existsByEmail(email: String) async -> Bool {
+    public func existsUserByEmail(_ email: String) async -> Bool {
         users.contains(where: { $0.email.caseInsensitiveCompare(email) == .orderedSame })
     }
     

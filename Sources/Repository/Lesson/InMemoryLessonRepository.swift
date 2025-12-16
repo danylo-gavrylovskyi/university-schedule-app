@@ -1,6 +1,6 @@
 import Foundation
 
-public actor InMemoryLessonsRepository: LessonsRepository {
+public actor InMemoryLessonRepository: LessonRepository {
     
     private var lessons: [Lesson] = []
     
@@ -8,7 +8,7 @@ public actor InMemoryLessonsRepository: LessonsRepository {
         lessons
     }
     
-    public func getLessonById(id: UUID) async -> Lesson? {
+    public func getLessonById(_ id: UUID) async -> Lesson? {
         lessons.first(where: { $0.id == id })
     }
     

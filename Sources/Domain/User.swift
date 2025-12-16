@@ -1,6 +1,6 @@
 import Foundation
 
-public struct User {
+public struct User: Equatable {
     public let id: UUID
     public let email: String
     public let passwordHash: String

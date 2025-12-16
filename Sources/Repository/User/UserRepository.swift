@@ -1,14 +1,14 @@
 import Foundation
 
-public protocol UsersRepository {
+public protocol UserRepository {
     
     func getAllUsers() async -> [User]
     
-    func getUserById(id: UUID) async -> User?
+    func getUserById(_ id: UUID) async -> User?
     
-    func getUserByEmail(email: String) async -> User?
+    func getUserByEmail(_ email: String) async -> User?
     
-    func existsByEmail(email: String) async -> Bool
+    func existsUserByEmail(_ email: String) async -> Bool
     
     func addUser(_ user: User) async -> User
     

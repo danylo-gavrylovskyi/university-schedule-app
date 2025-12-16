@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Lesson {
+public struct Lesson: Equatable {
     public let id: UUID
     public let subjectName: String
     public let teacherName: String
