@@ -12,6 +12,10 @@
 		41005ED02EF1CE470063B8BD /* AdminLessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005ECF2EF1CE470063B8BD /* AdminLessonCell.swift */; };
 		41005ED22EF1CE680063B8BD /* AdminScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005ED12EF1CE680063B8BD /* AdminScheduleViewController.swift */; };
 		41005ED52EF1CFCE0063B8BD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41005ED42EF1CFCE0063B8BD /* SnapKit */; };
+		41005ED82EF1E5680063B8BD /* LessonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005ED72EF1E5680063B8BD /* LessonsViewModel.swift */; };
+		41005EDA2EF1F5810063B8BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005ED92EF1F5810063B8BD /* ContentView.swift */; };
+		41005EDC2EF1FD630063B8BD /* LessonEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005EDB2EF1FD630063B8BD /* LessonEditorViewController.swift */; };
+		41005EDE2EF2059D0063B8BD /* LessonEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005EDD2EF2059D0063B8BD /* LessonEditorViewModel.swift */; };
 		416E5A772EF1873900453E5B /* UniversityScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A762EF1873900453E5B /* UniversityScheduleApp.swift */; };
 		416E5A7B2EF1873D00453E5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 416E5A7A2EF1873D00453E5B /* Assets.xcassets */; };
 		416E5A8A2EF18BCB00453E5B /* LessonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A892EF18BCB00453E5B /* LessonRepository.swift */; };
@@ -40,6 +44,10 @@
 		41005ECB2EF1C4FA0063B8BD /* LessonFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonFormat.swift; sourceTree = "<group>"; };
 		41005ECF2EF1CE470063B8BD /* AdminLessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLessonCell.swift; sourceTree = "<group>"; };
 		41005ED12EF1CE680063B8BD /* AdminScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminScheduleViewController.swift; sourceTree = "<group>"; };
+		41005ED72EF1E5680063B8BD /* LessonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewModel.swift; sourceTree = "<group>"; };
+		41005ED92EF1F5810063B8BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		41005EDB2EF1FD630063B8BD /* LessonEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonEditorViewController.swift; sourceTree = "<group>"; };
+		41005EDD2EF2059D0063B8BD /* LessonEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonEditorViewModel.swift; sourceTree = "<group>"; };
 		416E5A732EF1873900453E5B /* university-schedule-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "university-schedule-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		416E5A762EF1873900453E5B /* UniversityScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityScheduleApp.swift; sourceTree = "<group>"; };
 		416E5A7A2EF1873D00453E5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				41005ECE2EF1CE210063B8BD /* Admin */,
+				41005ED92EF1F5810063B8BD /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -87,8 +96,18 @@
 			children = (
 				41005ECF2EF1CE470063B8BD /* AdminLessonCell.swift */,
 				41005ED12EF1CE680063B8BD /* AdminScheduleViewController.swift */,
+				41005EDB2EF1FD630063B8BD /* LessonEditorViewController.swift */,
 			);
 			path = Admin;
+			sourceTree = "<group>";
+		};
+		41005ED62EF1E5560063B8BD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				41005ED72EF1E5680063B8BD /* LessonsViewModel.swift */,
+				41005EDD2EF2059D0063B8BD /* LessonEditorViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		416E5A6A2EF1873900453E5B = {
@@ -112,6 +131,7 @@
 		416E5A752EF1873900453E5B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				41005ED62EF1E5560063B8BD /* ViewModels */,
 				41005ECD2EF1CDE90063B8BD /* Views */,
 				416E5A762EF1873900453E5B /* UniversityScheduleApp.swift */,
 				416E5A842EF18A1900453E5B /* Repository */,
@@ -282,7 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41005ED82EF1E5680063B8BD /* LessonsViewModel.swift in Sources */,
+				41005EDC2EF1FD630063B8BD /* LessonEditorViewController.swift in Sources */,
 				41005ECC2EF1C4FA0063B8BD /* LessonFormat.swift in Sources */,
+				41005EDA2EF1F5810063B8BD /* ContentView.swift in Sources */,
 				416E5A8E2EF1901B00453E5B /* User.swift in Sources */,
 				416E5A952EF1A1F600453E5B /* UserRepository.swift in Sources */,
 				416E5A972EF1A20F00453E5B /* InMemoryUserRepository.swift in Sources */,
@@ -292,6 +315,7 @@
 				41005ECA2EF1C4B30063B8BD /* LessonType.swift in Sources */,
 				416E5A922EF197CA00453E5B /* InMemoryLessonRepository.swift in Sources */,
 				416E5A772EF1873900453E5B /* UniversityScheduleApp.swift in Sources */,
+				41005EDE2EF2059D0063B8BD /* LessonEditorViewModel.swift in Sources */,
 				416E5A8A2EF18BCB00453E5B /* LessonRepository.swift in Sources */,
 				41005ED22EF1CE680063B8BD /* AdminScheduleViewController.swift in Sources */,
 			);
