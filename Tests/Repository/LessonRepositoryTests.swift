@@ -3,10 +3,11 @@ import XCTest
 
 final class LessonRepositoryTests: XCTestCase {
     
+    let lesson1 = Lesson(subjectName: "test1", teacherName: "test1", classroom: "test1", type: LessonType.lecture, format: LessonFormat.offline, startTime: Date(), endTime: Date())
+    let lesson2 = Lesson(subjectName: "test2", teacherName: "test2", classroom: "test2", type: LessonType.practice, format: LessonFormat.online, startTime: Date(), endTime: Date())
+    
     func testGetAllLessons() async {
         let repo = InMemoryLessonRepository()
-        let lesson1 = Lesson(subjectName: "test1", teacherName: "test1", classroom: "test1", startTime: Date(), endTime: Date())
-        let lesson2 = Lesson(subjectName: "test2", teacherName: "test2", classroom: "test2", startTime: Date(), endTime: Date())
         
         let _ = await repo.addLesson(lesson1)
         let _ = await repo.addLesson(lesson2)
@@ -19,8 +20,6 @@ final class LessonRepositoryTests: XCTestCase {
     
     func testGetLessonById() async {
         let repo = InMemoryLessonRepository()
-        let lesson1 = Lesson(subjectName: "test1", teacherName: "test1", classroom: "test1", startTime: Date(), endTime: Date())
-        let lesson2 = Lesson(subjectName: "test2", teacherName: "test2", classroom: "test2", startTime: Date(), endTime: Date())
         
         let _ = await repo.addLesson(lesson1)
         let _ = await repo.addLesson(lesson2)
@@ -33,8 +32,6 @@ final class LessonRepositoryTests: XCTestCase {
     
     func testGetLessonByIdWithWrongIdReturnsNil() async {
         let repo = InMemoryLessonRepository()
-        let lesson1 = Lesson(subjectName: "test1", teacherName: "test1", classroom: "test1", startTime: Date(), endTime: Date())
-        let lesson2 = Lesson(subjectName: "test2", teacherName: "test2", classroom: "test2", startTime: Date(), endTime: Date())
         
         let _ = await repo.addLesson(lesson1)
         let _ = await repo.addLesson(lesson2)
@@ -45,8 +42,8 @@ final class LessonRepositoryTests: XCTestCase {
     
     func testGetLessonsByTimeSpanWithCorrectDates() async {
         let repo = InMemoryLessonRepository()
-        let lesson1 = Lesson(subjectName: "test1", teacherName: "test1", classroom: "test1", startTime: Date() + 2, endTime: Date() + 4)
-        let lesson2 = Lesson(subjectName: "test2", teacherName: "test2", classroom: "test2", startTime: Date() + 6, endTime: Date() + 8)
+        let lesson1 = Lesson(subjectName: "test1", teacherName: "test1", classroom: "test1", type: LessonType.lecture, format: LessonFormat.offline, startTime: Date() + 2, endTime: Date() + 4)
+        let lesson2 = Lesson(subjectName: "test2", teacherName: "test2", classroom: "test2", type: LessonType.practice, format: LessonFormat.online, startTime: Date() + 6, endTime: Date() + 8)
         
         let _ = await repo.addLesson(lesson1)
         let _ = await repo.addLesson(lesson2)
@@ -58,8 +55,8 @@ final class LessonRepositoryTests: XCTestCase {
     
     func testGetLessonsByTimeSpanWithIncorrectDatesReturnEmptyArray() async {
         let repo = InMemoryLessonRepository()
-        let lesson1 = Lesson(subjectName: "test1", teacherName: "test1", classroom: "test1", startTime: Date() + 2, endTime: Date() + 4)
-        let lesson2 = Lesson(subjectName: "test2", teacherName: "test2", classroom: "test2", startTime: Date() + 6, endTime: Date() + 8)
+        let lesson1 = Lesson(subjectName: "test1", teacherName: "test1", classroom: "test1", type: LessonType.lecture, format: LessonFormat.offline, startTime: Date() + 2, endTime: Date() + 4)
+        let lesson2 = Lesson(subjectName: "test2", teacherName: "test2", classroom: "test2", type: LessonType.practice, format: LessonFormat.online, startTime: Date() + 6, endTime: Date() + 8)
         
         let _ = await repo.addLesson(lesson1)
         let _ = await repo.addLesson(lesson2)
@@ -70,7 +67,6 @@ final class LessonRepositoryTests: XCTestCase {
     
     func testAddLesson() async {
         let repo = InMemoryLessonRepository()
-        let lesson1 = Lesson(subjectName: "test1", teacherName: "test1", classroom: "test1", startTime: Date(), endTime: Date())
         
         let _ = await repo.addLesson(lesson1)
         let lessons = await repo.getAllLessons()
@@ -86,7 +82,6 @@ final class LessonRepositoryTests: XCTestCase {
     
     func testUpdateLessonWhichDoesntExistReturnsNil() async {
         let repo = InMemoryLessonRepository()
-        let lesson1 = Lesson(subjectName: "test1", teacherName: "test1", classroom: "test1", startTime: Date(), endTime: Date())
         
         let updatedLesson = await repo.updateLesson(id: UUID(), lesson: lesson1)
         
@@ -95,8 +90,6 @@ final class LessonRepositoryTests: XCTestCase {
     
     func testUpdateLessonDoesntChangeExistingLessonId() async {
         let repo = InMemoryLessonRepository()
-        let lesson1 = Lesson(subjectName: "test1", teacherName: "test1", classroom: "test1", startTime: Date(), endTime: Date())
-        let lesson2 = Lesson(subjectName: "test2", teacherName: "test2", classroom: "test2", startTime: Date(), endTime: Date())
         
         let _ = await repo.addLesson(lesson1)
         let updatedLesson = await repo.updateLesson(id: lesson1.id, lesson: lesson2)
@@ -120,7 +113,6 @@ final class LessonRepositoryTests: XCTestCase {
     
     func testRemoveLesson() async {
         let repo = InMemoryLessonRepository()
-        let lesson1 = Lesson(subjectName: "test1", teacherName: "test1", classroom: "test1", startTime: Date(), endTime: Date())
         
         let _ = await repo.addLesson(lesson1)
         let isDeleted = await repo.removeLesson(id: lesson1.id)

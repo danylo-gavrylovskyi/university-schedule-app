@@ -31,6 +31,8 @@ public actor InMemoryLessonRepository: LessonRepository {
             subjectName: lesson.subjectName,
             teacherName: lesson.teacherName,
             classroom: lesson.classroom,
+            type: lesson.type,
+            format: lesson.format,
             startTime: lesson.startTime,
             endTime: lesson.endTime
         )
