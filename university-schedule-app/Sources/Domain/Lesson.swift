@@ -1,0 +1,19 @@
+import Foundation
+
+public struct Lesson {
+    public let id: UUID
+    public let subjectName: String
+    public let teacherName: String
+    public let classroom: String
+    public let startTime: Date
+    public let endTime: Date
+    
+    init(id: UUID = UUID(), subjectName: String, teacherName: String, classroom: String, startTime: Date, endTime: Date) {
+        self.id = id
+        self.subjectName = subjectName
+        self.teacherName = teacherName
+        self.classroom = classroom
+        self.startTime = startTime
+        self.endTime = endTime
+    }
+}
