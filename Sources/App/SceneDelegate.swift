@@ -19,25 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
         
-        let lessonRepo = InMemoryLessonRepository()
-        let userRepo = InMemoryUserRepository()
+        let userRepo = InMemoryUserRepository(initialUsers: MockData.users)
+        let lessonRepo = InMemoryLessonRepository(initialLessons: MockData.lessons)
         
-        Task {
-            let allLessons = await lessonRepo.getAllLessons()
-            let allIds = Set(allLessons.map { $0.id })
-            await userRepo.seedUser(with: allIds)
-            
-            let service = ScheduleService(userRepo: userRepo, lessonRepo: lessonRepo)
-            
-            // 3. Create the Real App Screen with Dependencies
-            await MainActor.run {
-                // Now we can use our clean init!
-                let mainVC = ScheduleViewController(service: service, userId: testUserId)
-                let navVC = UINavigationController(rootViewController: mainVC)
-                
-                // Swap the root view controller smoothly
-                window.rootViewController = navVC
-            }
-        }
+        let validationService = ValidationService()
+        let scheduleService = ScheduleService(lessonRepository: lessonRepo, validationService: validationService)
+        let studentScheduleService = StudentScheduleService(lessonRepository: lessonRepo)
+        let authService = AuthService(userRepository: userRepo)
+        
+        // Init the viewModels and Controllers here...
     }
 }
