@@ -4,6 +4,8 @@ public actor InMemoryLessonRepository: LessonRepository {
     
     private var lessons: [Lesson] = []
     
+    public init() {}
+
     public func getAllLessons() async -> [Lesson] {
         lessons
     }
@@ -48,6 +50,4 @@ public actor InMemoryLessonRepository: LessonRepository {
         lessons.remove(at: idx)
         return true
     }
-    
-    
 }

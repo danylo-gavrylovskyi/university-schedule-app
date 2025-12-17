@@ -13,7 +13,11 @@ public struct MockData {
         id: UUID(uuidString: "00000000-0000-0000-0000-000000000002")!,
         email: "student@kse.org.ua",
         passwordHash: "student123",
-        role: .student
+        role: .student,
+        enrolledLessonIds: Set([
+            UUID(uuidString: "10000000-0000-0000-0000-000000000001")!,
+            UUID(uuidString: "10000000-0000-0000-0000-000000000002")!
+        ])
     )
     
     public static let users: [User] = [adminUser, studentUser]

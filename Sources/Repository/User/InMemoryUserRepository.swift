@@ -3,6 +3,8 @@ import Foundation
 public actor InMemoryUserRepository: UserRepository {
     
     private var users: [User] = []
+
+    public init() {}
     
     public func getAllUsers() async -> [User] {
         users

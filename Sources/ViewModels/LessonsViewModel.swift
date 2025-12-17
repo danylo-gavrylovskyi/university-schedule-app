@@ -1,40 +1,40 @@
 import Foundation
+import Combine
 
-struct LessonSection {
-    let date: Date
-    var lessons: [Lesson]
-}
-
+@MainActor
 final class LessonsViewModel: ObservableObject {
     
-    @Published var sections: [LessonSection] = [
-        LessonSection(date: Date(), lessons: [Lesson(subjectName: "Cloud Architecture", teacherName: "John Doe", classroom: "1.07", type: LessonType.lecture, format: LessonFormat.offline, startTime: Date(), endTime: Date().addingTimeInterval(1000)), Lesson(subjectName: "Java Development", teacherName: "John Doe", classroom: "1.16", type: LessonType.practice, format: LessonFormat.offline, startTime: Date(), endTime: Date() + 10)]), LessonSection(date: Date().addingTimeInterval(100000), lessons: [Lesson(subjectName: "Apple Platform", teacherName: "John Doe", classroom: "1.07", type: LessonType.lecture, format: LessonFormat.offline, startTime: Date(), endTime: Date().addingTimeInterval(1000)), Lesson(subjectName: "Java Development", teacherName: "John Doe", classroom: "1.16", type: LessonType.lecture, format: LessonFormat.offline, startTime: Date(), endTime: Date() + 10)])
-    ] // its just mock data to test ui
+    @Published var sections: [LessonSection] = []
+    @Published var isLoading = false
+    @Published var errorMessage: String?
     
-    private func aggregateLessons(_ lessons: [Lesson]) {
-        let grouped = Dictionary(grouping: lessons) { lesson in
-            Calendar.current.startOfDay(for: lesson.startTime)
-        }
-        
-        let sortedKeys = grouped.keys.sorted()
-        
-        self.sections = sortedKeys.map { date in
-            let sortedLessons = grouped[date]?.sorted { $0.startTime < $1.startTime }
-            return LessonSection(date: date, lessons: sortedLessons ?? [])
-        }
+    private let scheduleService: ScheduleService
+    
+    init(scheduleService: ScheduleService) {
+        self.scheduleService = scheduleService
     }
     
-    func deleteLesson(section: Int, row: Int) {
-        var updatedSections = sections
-        updatedSections[section].lessons.remove(at: row)
+    func loadLessons() async {
+        isLoading = true
+        errorMessage = nil
         
-        if updatedSections[section].lessons.isEmpty {
-            updatedSections.remove(at: section)
-        }
+        let sections = await scheduleService.getAllLessons()
         
-        self.sections = updatedSections
-        
-        // add delete this lesson logic
+        self.sections = sections
+        isLoading = false
     }
     
+    func deleteLesson(section: Int, row: Int) async {
+        guard section < sections.count, row < sections[section].lessons.count else { return }
+        
+        let lessonId = sections[section].lessons[row].id
+        
+        let deleted = await scheduleService.deleteLesson(id: lessonId)
+        
+        if deleted {
+            await loadLessons()
+        } else {
+            errorMessage = "Failed to delete lesson"
+        }
+    }
 }

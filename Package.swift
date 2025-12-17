@@ -15,7 +15,9 @@ let package = Package(
             exclude: [
                 "UniversityScheduleApp.swift",
                 "Views",
-                "ViewModels"
+                "ViewModels",
+                "App",
+                "UI"
             ]
         ),
         .testTarget(
