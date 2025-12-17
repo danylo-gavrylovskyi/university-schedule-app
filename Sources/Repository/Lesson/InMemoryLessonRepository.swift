@@ -4,6 +4,51 @@ public actor InMemoryLessonRepository: LessonRepository {
     
     private var lessons: [Lesson] = []
     
+    //DELETE THIS BLOCK IN FUTURE START
+    public init() {
+            let titles = [
+                "Design Engineering",
+                "UI/UX Interface Design",
+                "Art History",
+                "Mobile Development"
+            ]
+            
+            let startHours   = [8,  10, 11, 13]
+            let startMinutes = [30, 0,  30, 30]
+            
+            let endHours     = [9,  11, 12, 14]
+            let endMinutes   = [50, 20, 50, 50]
+            
+            for i in 0..<4 {
+                let start = Calendar.current.date(
+                    bySettingHour: startHours[i],
+                    minute: startMinutes[i],
+                    second: 0,
+                    of: Date()
+                )!
+                
+                let end = Calendar.current.date(
+                    bySettingHour: endHours[i],
+                    minute: endMinutes[i],
+                    second: 0,
+                    of: Date()
+                )!
+                
+                let lesson = Lesson(
+                    id: UUID(),
+                    subjectName: titles[i],
+                    teacherName: "Dr. Alex Abakumov",
+                    classroom: "Room 10\(i)A",
+                    startTime: start,
+                    endTime: end
+                )
+                lessons.append(lesson)
+            }
+        }
+    //DELETE THIS BLOCK IN FUTURE END
+    
+    
+    
     public func getAllLessons() async -> [Lesson] {
         lessons
     }

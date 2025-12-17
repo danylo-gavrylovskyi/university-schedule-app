@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EA346712EF2186F00FCB08F /* TimeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA346702EF2186800FCB08F /* TimeSlot.swift */; };
 		416E5A772EF1873900453E5B /* UniversityScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A762EF1873900453E5B /* UniversityScheduleApp.swift */; };
 		416E5A7B2EF1873D00453E5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 416E5A7A2EF1873D00453E5B /* Assets.xcassets */; };
 		416E5A8A2EF18BCB00453E5B /* LessonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A892EF18BCB00453E5B /* LessonRepository.swift */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E79E5E52EF1FF3D000D141D /* university-schedule-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "university-schedule-app-Info.plist"; sourceTree = "<group>"; };
+		2EA346702EF2186800FCB08F /* TimeSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlot.swift; sourceTree = "<group>"; };
 		416E5A732EF1873900453E5B /* university-schedule-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "university-schedule-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		416E5A762EF1873900453E5B /* UniversityScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityScheduleApp.swift; sourceTree = "<group>"; };
 		416E5A7A2EF1873D00453E5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +48,12 @@
 		416E5A9B2EF1A65F00453E5B /* UserRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryTests.swift; sourceTree = "<group>"; };
 		416E5AA12EF1A80200453E5B /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2E79E5C72EF1C769000D141D /* UI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UI; sourceTree = "<group>"; };
+		2E79E5D32EF1EC54000D141D /* Services */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Services; sourceTree = "<group>"; };
+		2E79E5DF2EF1FA54000D141D /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		416E5A702EF1873900453E5B /* Frameworks */ = {
@@ -67,6 +76,7 @@
 		416E5A6A2EF1873900453E5B = {
 			isa = PBXGroup;
 			children = (
+				2E79E5E52EF1FF3D000D141D /* university-schedule-app-Info.plist */,
 				416E5A752EF1873900453E5B /* Sources */,
 				416E5AA22EF1A80200453E5B /* Tests */,
 				416E5A742EF1873900453E5B /* Products */,
@@ -85,6 +95,9 @@
 		416E5A752EF1873900453E5B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2E79E5DF2EF1FA54000D141D /* App */,
+				2E79E5D32EF1EC54000D141D /* Services */,
+				2E79E5C72EF1C769000D141D /* UI */,
 				416E5A762EF1873900453E5B /* UniversityScheduleApp.swift */,
 				416E5A842EF18A1900453E5B /* Repository */,
 				416E5A862EF18A3D00453E5B /* Domain */,
@@ -105,6 +118,7 @@
 		416E5A862EF18A3D00453E5B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2EA346702EF2186800FCB08F /* TimeSlot.swift */,
 				416E5A8B2EF18C6800453E5B /* Lesson.swift */,
 				416E5A8D2EF1901B00453E5B /* User.swift */,
 				416E5A8F2EF1902600453E5B /* UserRole.swift */,
@@ -161,6 +175,11 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2E79E5C72EF1C769000D141D /* UI */,
+				2E79E5D32EF1EC54000D141D /* Services */,
+				2E79E5DF2EF1FA54000D141D /* App */,
 			);
 			name = "university-schedule-app";
 			productName = "university-schedule-app";
@@ -252,6 +271,7 @@
 				416E5A902EF1902600453E5B /* UserRole.swift in Sources */,
 				416E5A8C2EF18C6800453E5B /* Lesson.swift in Sources */,
 				416E5A922EF197CA00453E5B /* InMemoryLessonRepository.swift in Sources */,
+				2EA346712EF2186F00FCB08F /* TimeSlot.swift in Sources */,
 				416E5A772EF1873900453E5B /* UniversityScheduleApp.swift in Sources */,
 				416E5A8A2EF18BCB00453E5B /* LessonRepository.swift in Sources */,
 			);
@@ -401,7 +421,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "university-schedule-app-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -429,7 +449,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "university-schedule-app-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

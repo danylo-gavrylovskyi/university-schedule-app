@@ -4,6 +4,22 @@ public actor InMemoryUserRepository: UserRepository {
     
     private var users: [User] = []
     
+    
+    //DELETE THIS BLOCK IN FUTURE START
+    
+    public func seedUser(with lessonIds: Set<UUID>) {
+            let user = User(
+                id: testUserId,
+                email: "student@university.com",
+                passwordHash: "secure_pass",
+                role: .student,
+                enrolledLessonIds:lessonIds
+            )
+            users.append(user)
+        }
+    //DELETE THIS BLOCK IN FUTURE END
+    
+    
     public func getAllUsers() async -> [User] {
         users
     }
