@@ -7,26 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41005ECA2EF1C4B30063B8BD /* LessonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005EC92EF1C4B30063B8BD /* LessonType.swift */; };
-		41005ECC2EF1C4FA0063B8BD /* LessonFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005ECB2EF1C4FA0063B8BD /* LessonFormat.swift */; };
-		41005ED02EF1CE470063B8BD /* AdminLessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005ECF2EF1CE470063B8BD /* AdminLessonCell.swift */; };
-		41005ED22EF1CE680063B8BD /* AdminScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005ED12EF1CE680063B8BD /* AdminScheduleViewController.swift */; };
+		2E5CFE302EF459C200D8B483 /* UniversityScheduleCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2E5CFE2F2EF459C200D8B483 /* UniversityScheduleCore */; };
 		41005ED52EF1CFCE0063B8BD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41005ED42EF1CFCE0063B8BD /* SnapKit */; };
-		41005ED82EF1E5680063B8BD /* LessonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005ED72EF1E5680063B8BD /* LessonsViewModel.swift */; };
-		41005EDA2EF1F5810063B8BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005ED92EF1F5810063B8BD /* ContentView.swift */; };
-		41005EDC2EF1FD630063B8BD /* LessonEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005EDB2EF1FD630063B8BD /* LessonEditorViewController.swift */; };
-		41005EDE2EF2059D0063B8BD /* LessonEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41005EDD2EF2059D0063B8BD /* LessonEditorViewModel.swift */; };
-		416E5A772EF1873900453E5B /* UniversityScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A762EF1873900453E5B /* UniversityScheduleApp.swift */; };
-		416E5A7B2EF1873D00453E5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 416E5A7A2EF1873D00453E5B /* Assets.xcassets */; };
-		416E5A8A2EF18BCB00453E5B /* LessonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A892EF18BCB00453E5B /* LessonRepository.swift */; };
-		416E5A8C2EF18C6800453E5B /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A8B2EF18C6800453E5B /* Lesson.swift */; };
-		416E5A8E2EF1901B00453E5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A8D2EF1901B00453E5B /* User.swift */; };
-		416E5A902EF1902600453E5B /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A8F2EF1902600453E5B /* UserRole.swift */; };
-		416E5A922EF197CA00453E5B /* InMemoryLessonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A912EF197C900453E5B /* InMemoryLessonRepository.swift */; };
-		416E5A952EF1A1F600453E5B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A942EF1A1F600453E5B /* UserRepository.swift */; };
-		416E5A972EF1A20F00453E5B /* InMemoryUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A962EF1A20F00453E5B /* InMemoryUserRepository.swift */; };
-		416E5AAB2EF1A85C00453E5B /* LessonRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A992EF1A64B00453E5B /* LessonRepositoryTests.swift */; };
-		416E5AAC2EF1A86000453E5B /* UserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416E5A9B2EF1A65F00453E5B /* UserRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,33 +22,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		41005EC92EF1C4B30063B8BD /* LessonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonType.swift; sourceTree = "<group>"; };
-		41005ECB2EF1C4FA0063B8BD /* LessonFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonFormat.swift; sourceTree = "<group>"; };
-		41005ECF2EF1CE470063B8BD /* AdminLessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLessonCell.swift; sourceTree = "<group>"; };
-		41005ED12EF1CE680063B8BD /* AdminScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminScheduleViewController.swift; sourceTree = "<group>"; };
-		41005ED72EF1E5680063B8BD /* LessonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewModel.swift; sourceTree = "<group>"; };
-		41005ED92EF1F5810063B8BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		41005EDB2EF1FD630063B8BD /* LessonEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonEditorViewController.swift; sourceTree = "<group>"; };
-		41005EDD2EF2059D0063B8BD /* LessonEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonEditorViewModel.swift; sourceTree = "<group>"; };
-		416E5A732EF1873900453E5B /* university-schedule-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "university-schedule-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		416E5A762EF1873900453E5B /* UniversityScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityScheduleApp.swift; sourceTree = "<group>"; };
-		416E5A7A2EF1873D00453E5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		416E5A892EF18BCB00453E5B /* LessonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonRepository.swift; sourceTree = "<group>"; };
-		416E5A8B2EF18C6800453E5B /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
-		416E5A8D2EF1901B00453E5B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		416E5A8F2EF1902600453E5B /* UserRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
-		416E5A912EF197C900453E5B /* InMemoryLessonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryLessonRepository.swift; sourceTree = "<group>"; };
-		416E5A942EF1A1F600453E5B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
-		416E5A962EF1A20F00453E5B /* InMemoryUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryUserRepository.swift; sourceTree = "<group>"; };
-		416E5A992EF1A64B00453E5B /* LessonRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonRepositoryTests.swift; sourceTree = "<group>"; };
-		416E5A9B2EF1A65F00453E5B /* UserRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryTests.swift; sourceTree = "<group>"; };
-		416E5AA12EF1A80200453E5B /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E5CFE1A2EF366B800D8B483 /* UniversityScheduleCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UniversityScheduleCore; sourceTree = "<group>"; };
+		2E5CFE292EF378A600D8B483 /* university-schedule-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "university-schedule-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E5CFE2A2EF378A600D8B483 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		2E5CFE2C2EF4565A00D8B483 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppDelegate.swift,
+				SceneDelegate.swift,
+			);
+			target = 416E5A722EF1873900453E5B /* university-schedule-app */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		2E79E5C72EF1C769000D141D /* UI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UI; sourceTree = "<group>"; };
-		2E79E5D32EF1EC54000D141D /* Services */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Services; sourceTree = "<group>"; };
-		2E79E5DF2EF1FA54000D141D /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
+		2E5CFE1E2EF3729100D8B483 /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (2E5CFE2C2EF4565A00D8B483 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E5CFE302EF459C200D8B483 /* UniversityScheduleCore in Frameworks */,
 				41005ED52EF1CFCE0063B8BD /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,121 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		41005ECD2EF1CDE90063B8BD /* Views */ = {
+		2E5CFE2E2EF459C200D8B483 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				41005ECE2EF1CE210063B8BD /* Admin */,
-				41005ED92EF1F5810063B8BD /* ContentView.swift */,
 			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		41005ECE2EF1CE210063B8BD /* Admin */ = {
-			isa = PBXGroup;
-			children = (
-				41005ECF2EF1CE470063B8BD /* AdminLessonCell.swift */,
-				41005ED12EF1CE680063B8BD /* AdminScheduleViewController.swift */,
-				41005EDB2EF1FD630063B8BD /* LessonEditorViewController.swift */,
-			);
-			path = Admin;
-			sourceTree = "<group>";
-		};
-		41005ED62EF1E5560063B8BD /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				41005ED72EF1E5680063B8BD /* LessonsViewModel.swift */,
-				41005EDD2EF2059D0063B8BD /* LessonEditorViewModel.swift */,
-			);
-			path = ViewModels;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		416E5A6A2EF1873900453E5B = {
 			isa = PBXGroup;
 			children = (
-				2E79E5E52EF1FF3D000D141D /* university-schedule-app-Info.plist */,
-				416E5A752EF1873900453E5B /* Sources */,
-				416E5AA22EF1A80200453E5B /* Tests */,
-				416E5A742EF1873900453E5B /* Products */,
+				2E5CFE1E2EF3729100D8B483 /* App */,
+				2E5CFE1A2EF366B800D8B483 /* UniversityScheduleCore */,
+				2E5CFE292EF378A600D8B483 /* university-schedule-app.app */,
+				2E5CFE2A2EF378A600D8B483 /* Tests.xctest */,
+				2E5CFE2E2EF459C200D8B483 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		416E5A742EF1873900453E5B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				416E5A732EF1873900453E5B /* university-schedule-app.app */,
-				416E5AA12EF1A80200453E5B /* Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		416E5A752EF1873900453E5B /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				41005ED62EF1E5560063B8BD /* ViewModels */,
-				41005ECD2EF1CDE90063B8BD /* Views */,
-				416E5A762EF1873900453E5B /* UniversityScheduleApp.swift */,
-				416E5A842EF18A1900453E5B /* Repository */,
-				416E5A862EF18A3D00453E5B /* Domain */,
-				416E5A7A2EF1873D00453E5B /* Assets.xcassets */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		416E5A842EF18A1900453E5B /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				416E5A932EF1A1DE00453E5B /* User */,
-				416E5A882EF18B8400453E5B /* Lesson */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		416E5A862EF18A3D00453E5B /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				2EA346702EF2186800FCB08F /* TimeSlot.swift */,
-				416E5A8B2EF18C6800453E5B /* Lesson.swift */,
-				416E5A8D2EF1901B00453E5B /* User.swift */,
-				416E5A8F2EF1902600453E5B /* UserRole.swift */,
-				41005EC92EF1C4B30063B8BD /* LessonType.swift */,
-				41005ECB2EF1C4FA0063B8BD /* LessonFormat.swift */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		416E5A882EF18B8400453E5B /* Lesson */ = {
-			isa = PBXGroup;
-			children = (
-				416E5A892EF18BCB00453E5B /* LessonRepository.swift */,
-				416E5A912EF197C900453E5B /* InMemoryLessonRepository.swift */,
-			);
-			path = Lesson;
-			sourceTree = "<group>";
-		};
-		416E5A932EF1A1DE00453E5B /* User */ = {
-			isa = PBXGroup;
-			children = (
-				416E5A942EF1A1F600453E5B /* UserRepository.swift */,
-				416E5A962EF1A20F00453E5B /* InMemoryUserRepository.swift */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
-		416E5AA22EF1A80200453E5B /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				416E5AAA2EF1A82E00453E5B /* Repository */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		416E5AAA2EF1A82E00453E5B /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				416E5A9B2EF1A65F00453E5B /* UserRepositoryTests.swift */,
-				416E5A992EF1A64B00453E5B /* LessonRepositoryTests.swift */,
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,17 +95,13 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				2E79E5C72EF1C769000D141D /* UI */,
-				2E79E5D32EF1EC54000D141D /* Services */,
-				2E79E5DF2EF1FA54000D141D /* App */,
-			);
 			name = "university-schedule-app";
 			packageProductDependencies = (
 				41005ED42EF1CFCE0063B8BD /* SnapKit */,
+				2E5CFE2F2EF459C200D8B483 /* UniversityScheduleCore */,
 			);
 			productName = "university-schedule-app";
-			productReference = 416E5A732EF1873900453E5B /* university-schedule-app.app */;
+			productReference = 2E5CFE292EF378A600D8B483 /* university-schedule-app.app */;
 			productType = "com.apple.product-type.application";
 		};
 		416E5AA02EF1A80200453E5B /* Tests */ = {
@@ -248,7 +119,7 @@
 			);
 			name = Tests;
 			productName = Tests;
-			productReference = 416E5AA12EF1A80200453E5B /* Tests.xctest */;
+			productReference = 2E5CFE2A2EF378A600D8B483 /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -282,7 +153,7 @@
 			packageReferences = (
 				41005ED32EF1CFCD0063B8BD /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
-			productRefGroup = 416E5A742EF1873900453E5B /* Products */;
+			productRefGroup = 416E5A6A2EF1873900453E5B;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -297,7 +168,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				416E5A7B2EF1873D00453E5B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,23 +185,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41005ED82EF1E5680063B8BD /* LessonsViewModel.swift in Sources */,
-				41005EDC2EF1FD630063B8BD /* LessonEditorViewController.swift in Sources */,
-				41005ECC2EF1C4FA0063B8BD /* LessonFormat.swift in Sources */,
-				41005EDA2EF1F5810063B8BD /* ContentView.swift in Sources */,
-				416E5A8E2EF1901B00453E5B /* User.swift in Sources */,
-				416E5A952EF1A1F600453E5B /* UserRepository.swift in Sources */,
-				416E5A972EF1A20F00453E5B /* InMemoryUserRepository.swift in Sources */,
-				416E5A902EF1902600453E5B /* UserRole.swift in Sources */,
-				416E5A8C2EF18C6800453E5B /* Lesson.swift in Sources */,
-				41005ED02EF1CE470063B8BD /* AdminLessonCell.swift in Sources */,
-				41005ECA2EF1C4B30063B8BD /* LessonType.swift in Sources */,
-				416E5A922EF197CA00453E5B /* InMemoryLessonRepository.swift in Sources */,
-				2EA346712EF2186F00FCB08F /* TimeSlot.swift in Sources */,
-				416E5A772EF1873900453E5B /* UniversityScheduleApp.swift in Sources */,
-				41005EDE2EF2059D0063B8BD /* LessonEditorViewModel.swift in Sources */,
-				416E5A8A2EF18BCB00453E5B /* LessonRepository.swift in Sources */,
-				41005ED22EF1CE680063B8BD /* AdminScheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,8 +192,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				416E5AAC2EF1A86000453E5B /* UserRepositoryTests.swift in Sources */,
-				416E5AAB2EF1A85C00453E5B /* LessonRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -459,6 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -479,7 +332,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "university-schedule-app-Info.plist";
+				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -507,7 +360,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "university-schedule-app-Info.plist";
+				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -603,6 +456,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2E5CFE2F2EF459C200D8B483 /* UniversityScheduleCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UniversityScheduleCore;
+		};
 		41005ED42EF1CFCE0063B8BD /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 41005ED32EF1CFCD0063B8BD /* XCRemoteSwiftPackageReference "SnapKit" */;
